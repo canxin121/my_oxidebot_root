@@ -1,12 +1,10 @@
-# Application runner
+# Canxin OxideBot runner
 
-这个目录是模板用户真正编写 OxideBot 应用的地方。
+这个 runner 是 `my_oxidebot_root` 的实际业务程序，只包含：
 
-- `Cargo.toml`：添加 Bot 适配器、Handler 和业务依赖；
-- `src/main.rs`：初始化适配器并注册 Filter/Handler；
-- `src/example_handler.rs`：最小 `/start`、`/echo` 示例，可直接删除替换；
-- `scripts/build-android.sh`：将当前 crate 交叉编译到四种 Android ABI；
-- `Cargo.lock`：必须提交，保证 GitHub Actions 可复现构建。
+- `telegram_bot_oxidebot` Telegram 适配器；
+- `china_unicom_oxidebot` 中国联通余量查询、凭据续期和通知 Handler；
+- Android 四 ABI 交叉编译脚本。
 
 修改依赖后运行：
 
@@ -16,6 +14,7 @@ cargo check
 cargo generate-lockfile
 ```
 
-不要在这里硬编码 Token。使用 Android 模块的 `env.conf`，然后通过 `std::env::var` 读取。
-runner 的 Cargo 包名固定为 `oxidebot_app`，模块/App 的用户可见身份由根目录
-`template.properties` 控制，通常无需修改包名。
+不要在这里硬编码 Telegram Token 或联通登录 JSON。Telegram Token 通过模块 WebUI/App
+写入 `env.conf`；联通登录 JSON 只通过 Telegram 私聊命令导入并存入模块私有数据目录。
+
+Cargo 包名保持为 `oxidebot_app`，因为模块构建脚本按这个名字收集四种 ABI 的二进制。

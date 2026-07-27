@@ -1,12 +1,5 @@
-//! Minimal application example for the OxideBot Root template.
-//!
-//! Replace `ExampleHandler` with your own handlers and add any Bot adapters or
-//! application dependencies you need in `runner/Cargo.toml`.
-
-mod example_handler;
-
 use anyhow::Context;
-use example_handler::ExampleHandler;
+use china_unicom_oxidebot::ChinaUnicomHandler;
 use telegram_bot_oxidebot::bot::TelegramBot;
 
 #[tokio::main]
@@ -20,10 +13,14 @@ async fn main() -> anyhow::Result<()> {
     oxidebot::OxideBotManager::new()
         .bot(telegram)
         .await
-        .handler(ExampleHandler)
-        // Add your filters and handlers here:
-        // .filter(MyFilter)
-        // .handler(MyHandler::new(...).await?)
+        .wait_handler(|sender| {
+            Box::pin(async move {
+                ChinaUnicomHandler::try_new(sender)
+                    .await
+                    .expect("failed to initialize China Unicom handler")
+            })
+        })
+        .await
         .run_block()
         .await
 }
