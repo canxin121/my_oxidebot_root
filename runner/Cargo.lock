@@ -558,8 +558,8 @@ dependencies = [
 
 [[package]]
 name = "china_unicom_oxidebot"
-version = "0.3.0"
-source = "git+https://github.com/canxin121/china_unicom_oxidebot#09b6591df1526b77b1f4bdf7e4728d4f4abd9095"
+version = "0.3.1"
+source = "git+https://github.com/canxin121/china_unicom_oxidebot#4c36a3e40d21c50249995fd8ce2b09e377497a6a"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -2141,7 +2141,7 @@ dependencies = [
 
 [[package]]
 name = "oxidebot_app"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "anyhow",
  "china_unicom_oxidebot",
