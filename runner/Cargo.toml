@@ -1,0 +1,22 @@
+[package]
+name = "oxidebot_app"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.97"
+description = "Example OxideBot application for the OxideBot Root template"
+publish = false
+
+[dependencies]
+telegram_bot_oxidebot = "0.1.4"
+oxidebot = "0.1.8"
+tokio = { version = "1.53.1", features = ["full"] }
+tracing-subscriber = "0.3.23"
+anyhow = "1.0.104"
+async-trait = "0.1.89"
+
+[profile.release]
+lto = true
+strip = true
+opt-level = "z"   # Optimize for size.
+codegen-units = 1
+panic = "abort"

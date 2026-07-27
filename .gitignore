@@ -1,0 +1,9 @@
+/bin/*/oxidebot
+/build/
+/manager-app/.gradle/
+/manager-app/app/build/
+/manager-app/app/src/main/assets/index.html
+/runner/target/
+*.jks
+keystore.properties
+.DS_Store
