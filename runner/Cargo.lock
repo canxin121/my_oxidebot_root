@@ -528,7 +528,7 @@ dependencies = [
 [[package]]
 name = "china-unicom-rs"
 version = "1.0.0"
-source = "git+https://github.com/canxin121/china-unicom-rs#33fde99fbdee5ca682780c63a8711d7626fb4dd9"
+source = "git+https://github.com/canxin121/china-unicom-rs#b73991d6108567f15b84e48e90a80d18da593ce0"
 dependencies = [
  "base64 0.23.0",
  "chrono",
@@ -553,12 +553,13 @@ dependencies = [
  "tracing-subscriber",
  "url",
  "urlencoding",
+ "webpki-root-certs",
 ]
 
 [[package]]
 name = "china_unicom_oxidebot"
 version = "0.3.0"
-source = "git+https://github.com/canxin121/china_unicom_oxidebot#54b583cbba8bda948fb839241e157fb2e721dd14"
+source = "git+https://github.com/canxin121/china_unicom_oxidebot#09b6591df1526b77b1f4bdf7e4728d4f4abd9095"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -2140,7 +2141,7 @@ dependencies = [
 
 [[package]]
 name = "oxidebot_app"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "anyhow",
  "china_unicom_oxidebot",
@@ -3524,8 +3525,7 @@ checksum = "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369"
 [[package]]
 name = "telegram_bot_oxidebot"
 version = "0.1.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6fe4b55aecaabdd936519e9538cd75e8521b1196ef01a506e1cc1303e1c4c628"
+source = "git+https://github.com/canxin121/telegram_bot_oxidebot#c6373985af7399db03db711fc4c5208720517904"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -3542,6 +3542,7 @@ dependencies = [
  "tokio",
  "tracing",
  "url",
+ "webpki-root-certs",
 ]
 
 [[package]]

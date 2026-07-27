@@ -1,13 +1,13 @@
 [package]
 name = "oxidebot_app"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 rust-version = "1.97"
 description = "Personal Telegram OxideBot with China Unicom usage monitoring"
 publish = false
 
 [dependencies]
-telegram_bot_oxidebot = "0.1.4"
+telegram_bot_oxidebot = { version = "0.1.4", git = "https://github.com/canxin121/telegram_bot_oxidebot" }
 oxidebot = "0.1.8"
 tokio = { version = "1.53.1", features = ["full"] }
 tracing-subscriber = "0.3.23"

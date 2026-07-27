@@ -96,8 +96,8 @@ cd manager-app
 正式发布资产包括：
 
 ```text
-canxin_oxidebot-v0.1.0.zip
-canxin_oxidebot-manager-v0.1.0.apk
+canxin_oxidebot-v0.1.1.zip
+canxin_oxidebot-manager-v0.1.1.apk
 update.json
 ```
 
