@@ -31,3 +31,14 @@ async fn main() -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn telegram_adapter_constructs_with_the_unicom_tls_dependency_graph() {
+        let _adapter = TelegramAdapter::new("0:non-secret-test-token", "0")
+            .expect("mixed Rustls providers must not make adapter construction panic");
+    }
+}

@@ -1,6 +1,6 @@
 [package]
 name = "oxidebot_app"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024"
 rust-version = "1.97.1"
 description = "Personal Telegram OxideBot with China Unicom usage monitoring"
@@ -8,9 +8,9 @@ publish = false
 
 [dependencies]
 anyhow = "1.0.104"
-china_unicom_oxidebot = { git = "https://github.com/canxin121/china_unicom_oxidebot", rev = "c461c81c23c05c3c139ece042a74433983cebb50", version = "1.0.0" }
-oxidebot = { git = "https://github.com/canxin121/oxidebot", rev = "4e1ba8bcdd24b8d3965809450847dbee2689f5ff", version = "1.0.0" }
-oxidebot-adapter-telegram = { git = "https://github.com/canxin121/oxidebot", rev = "4e1ba8bcdd24b8d3965809450847dbee2689f5ff", version = "1.0.0" }
+china_unicom_oxidebot = { git = "https://github.com/canxin121/china_unicom_oxidebot", rev = "bffe97b9f14330c34044cc935216a7da235aedd6", version = "1.0.0" }
+oxidebot = { git = "https://github.com/canxin121/oxidebot", rev = "5eb05f6242230fe988cd163d14d3a67241a2bbd2", version = "1.0.0" }
+oxidebot-adapter-telegram = { git = "https://github.com/canxin121/oxidebot", rev = "5eb05f6242230fe988cd163d14d3a67241a2bbd2", version = "1.0.0" }
 tokio = { version = "1.53.1", features = ["macros", "rt-multi-thread"] }
 tracing-subscriber = "0.3.23"
 

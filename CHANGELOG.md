@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- 修复 China Unicom 插件与 Telegram adapter 同时启用不同 Rustls 加密后端时的启动 panic。
+- Telegram adapter 现在为自身 TLS 客户端显式选择 `ring`，不再依赖 Rustls 的进程级全局推断。
+
 ## 1.0.0
 
 - 升级至 OxideBot 1.0、官方 Telegram 适配器 1.0 与 China Unicom OxideBot 插件 1.0。
