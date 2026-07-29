@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0
+
+- 升级至 OxideBot 1.0、官方 Telegram 适配器 1.0 与 China Unicom OxideBot 插件 1.0。
+- 使用新插件 API；保留既有联通 SQLite 数据库与账户数据迁移。
+- Telegram 配置新增必填的稳定数字 `TELEGRAM_BOT_ID`。
+- Android 管理 App 构建升级至 Android Gradle Plugin 9.3.1 与 Gradle 9.6.1。
+
 ## 0.1.2
 
 - 修复一条 Telegram 联通命令会被处理两次、导致回复和操作重复执行的问题。

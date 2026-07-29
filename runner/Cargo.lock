@@ -528,7 +528,7 @@ dependencies = [
 [[package]]
 name = "china-unicom-rs"
 version = "1.0.0"
-source = "git+https://github.com/canxin121/china-unicom-rs#b73991d6108567f15b84e48e90a80d18da593ce0"
+source = "git+https://github.com/canxin121/china-unicom-rs#bfb4deea129d53d91c2748f828c6d4373da77c0c"
 dependencies = [
  "base64 0.23.0",
  "chrono",
@@ -558,20 +558,18 @@ dependencies = [
 
 [[package]]
 name = "china_unicom_oxidebot"
-version = "0.3.1"
-source = "git+https://github.com/canxin121/china_unicom_oxidebot#4c36a3e40d21c50249995fd8ce2b09e377497a6a"
+version = "1.0.0"
+source = "git+https://github.com/canxin121/china_unicom_oxidebot?rev=509c10ca83a95af8655ac27f6da6a3d79ccf734c#509c10ca83a95af8655ac27f6da6a3d79ccf734c"
 dependencies = [
  "anyhow",
  "async-trait",
  "china-unicom-rs",
  "chrono",
- "clap",
  "dashmap",
  "oxidebot",
  "sea-orm",
  "sea-orm-migration",
  "serde_json",
- "shlex",
  "tokio",
  "tracing",
 ]
@@ -669,15 +667,6 @@ checksum = "ba5a308b75df32fe02788e748662718f03fde005016435c444eea572398219fd"
 dependencies = [
  "bytes",
  "memchr",
-]
-
-[[package]]
-name = "concurrent-queue"
-version = "2.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ca0197aee26d1ae37445ee532fefce43251d24cc7c166799f4d46817f1d3973"
-dependencies = [
- "crossbeam-utils",
 ]
 
 [[package]]
@@ -965,13 +954,13 @@ dependencies = [
 
 [[package]]
 name = "displaydoc"
-version = "0.2.6"
+version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1ac70aa55017e108007fbaf5aa0f54b021c98f92ff8af59d42eda9da96e3dd4f"
+checksum = "c6232dd377dcc64799954cbd3a9bb882e9cdc1308ccd87b1c098f1fb2eaf82a8"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.119",
+ "syn 3.0.3",
 ]
 
 [[package]]
@@ -1006,11 +995,11 @@ dependencies = [
 
 [[package]]
 name = "email-encoding"
-version = "0.4.1"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9298e6504d9b9e780ed3f7dfd43a61be8cd0e09eb07f7706a945b0072b6670b6"
+checksum = "420b9da095f052ea597503e39073b5b3c522f7db933fbac202d91d24492693fd"
 dependencies = [
- "base64 0.22.1",
+ "base64 0.23.0",
  "memchr",
 ]
 
@@ -1057,11 +1046,10 @@ dependencies = [
 
 [[package]]
 name = "event-listener"
-version = "5.4.1"
+version = "5.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e13b66accf52311f30a0db42147dadea9850cb48cd070028831ae5f5d4b856ab"
+checksum = "5a23add41df1562121a9393cb065eab5146a1242410f23a644851e90cfd669d2"
 dependencies = [
- "concurrent-queue",
  "parking",
  "pin-project-lite",
 ]
@@ -1380,9 +1368,9 @@ dependencies = [
 
 [[package]]
 name = "http"
-version = "1.4.2"
+version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6970f50e31d6fc17d3fa27329444bfa74e196cf62e95052a3f6fee181dba6425"
+checksum = "918d3568bebf352712bc2ef3d46a8bcf1a75b373be6539de198e9105cbbf9ce0"
 dependencies = [
  "bytes",
  "itoa",
@@ -2121,32 +2109,87 @@ dependencies = [
 
 [[package]]
 name = "oxidebot"
-version = "0.1.8"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d747187b5fe9f1eb9965a74e13c171a694061fc2c6d70508c1b342775b97d6dd"
+version = "1.0.0"
+source = "git+https://github.com/canxin121/oxidebot?rev=5a867139a12b716c54d2464c9fe7d2ca8af7e8ed#5a867139a12b716c54d2464c9fe7d2ca8af7e8ed"
+dependencies = [
+ "oxidebot-core",
+ "oxidebot-macros",
+ "oxidebot-runtime",
+]
+
+[[package]]
+name = "oxidebot-adapter-telegram"
+version = "1.0.0"
+source = "git+https://github.com/canxin121/oxidebot?rev=5a867139a12b716c54d2464c9fe7d2ca8af7e8ed#5a867139a12b716c54d2464c9fe7d2ca8af7e8ed"
+dependencies = [
+ "async-trait",
+ "chrono",
+ "oxidebot-core",
+ "oxidebot-runtime",
+ "reqwest",
+ "rustls",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tracing",
+ "webpki-roots",
+]
+
+[[package]]
+name = "oxidebot-core"
+version = "1.0.0"
+source = "git+https://github.com/canxin121/oxidebot?rev=5a867139a12b716c54d2464c9fe7d2ca8af7e8ed#5a867139a12b716c54d2464c9fe7d2ca8af7e8ed"
 dependencies = [
  "anyhow",
  "async-trait",
+ "bytes",
  "chrono",
- "hyper",
- "mime",
  "mime_guess",
- "reqwest",
  "serde",
  "serde_json",
+ "thiserror",
  "tokio",
+]
+
+[[package]]
+name = "oxidebot-macros"
+version = "1.0.0"
+source = "git+https://github.com/canxin121/oxidebot?rev=5a867139a12b716c54d2464c9fe7d2ca8af7e8ed#5a867139a12b716c54d2464c9fe7d2ca8af7e8ed"
+dependencies = [
+ "proc-macro-crate",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.119",
+]
+
+[[package]]
+name = "oxidebot-runtime"
+version = "1.0.0"
+source = "git+https://github.com/canxin121/oxidebot?rev=5a867139a12b716c54d2464c9fe7d2ca8af7e8ed#5a867139a12b716c54d2464c9fe7d2ca8af7e8ed"
+dependencies = [
+ "async-trait",
+ "chrono",
+ "futures-util",
+ "mime_guess",
+ "oxidebot-core",
+ "regex",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tokio-util",
  "tracing",
- "url",
 ]
 
 [[package]]
 name = "oxidebot_app"
-version = "0.1.2"
+version = "1.0.0"
 dependencies = [
  "anyhow",
  "china_unicom_oxidebot",
  "oxidebot",
- "telegram_bot_oxidebot",
+ "oxidebot-adapter-telegram",
  "tokio",
  "tracing-subscriber",
 ]
@@ -2561,7 +2604,6 @@ dependencies = [
  "cookie_store",
  "encoding_rs",
  "futures-core",
- "futures-util",
  "h2",
  "http",
  "http-body",
@@ -2572,7 +2614,6 @@ dependencies = [
  "js-sys",
  "log",
  "mime",
- "mime_guess",
  "percent-encoding",
  "pin-project-lite",
  "quinn",
@@ -2585,14 +2626,12 @@ dependencies = [
  "sync_wrapper",
  "tokio",
  "tokio-rustls",
- "tokio-util",
  "tower",
  "tower-http",
  "tower-service",
  "url",
  "wasm-bindgen",
  "wasm-bindgen-futures",
- "wasm-streams",
  "web-sys",
 ]
 
@@ -2727,9 +2766,9 @@ dependencies = [
 
 [[package]]
 name = "rustls"
-version = "0.23.42"
+version = "0.23.43"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3c54fcab019b409d04215d3a17cb438fd7fbf192ee61461f20f4fe18704bc138"
+checksum = "0283386ce02abc0151e1761d08802dfe86c173b0b494af5cbc086574e453da06"
 dependencies = [
  "aws-lc-rs",
  "log",
@@ -3523,29 +3562,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369"
 
 [[package]]
-name = "telegram_bot_oxidebot"
-version = "0.1.4"
-source = "git+https://github.com/canxin121/telegram_bot_oxidebot#c6373985af7399db03db711fc4c5208720517904"
-dependencies = [
- "anyhow",
- "async-trait",
- "base64 0.23.0",
- "chrono",
- "hmac",
- "hyper",
- "mime_guess",
- "oxidebot",
- "reqwest",
- "serde",
- "serde_json",
- "sha2 0.11.0",
- "tokio",
- "tracing",
- "url",
- "webpki-root-certs",
-]
-
-[[package]]
 name = "tempfile"
 version = "3.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3670,13 +3686,13 @@ dependencies = [
 
 [[package]]
 name = "tokio-macros"
-version = "2.7.1"
+version = "2.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6328af13490e73a9b4694030fafd93f8c8c6a9dede33e821c3fc63eddf8042ba"
+checksum = "78773a2a397f451582ce068015985c33193cf6dea8b74d2a639fe457b2f07b0e"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.119",
+ "syn 3.0.3",
 ]
 
 [[package]]
@@ -3709,8 +3725,10 @@ dependencies = [
  "bytes",
  "futures-core",
  "futures-sink",
+ "futures-util",
  "libc",
  "pin-project-lite",
+ "slab",
  "tokio",
 ]
 
@@ -3737,9 +3755,9 @@ dependencies = [
 
 [[package]]
 name = "toml_parser"
-version = "1.1.2+spec-1.1.0"
+version = "1.1.3+spec-1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a2abe9b86193656635d2411dc43050282ca48aa31c2451210f4202550afb7526"
+checksum = "1d38ac1cf9b95face32296c0a3ede1fdc270627c9d9c02a7274dd6d960dc4d56"
 dependencies = [
  "winnow",
 ]
@@ -4055,19 +4073,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dc1b4cb0cc549fcf58d7dfc081778139b3d283a081644e833e84682ad71cea24"
 dependencies = [
  "unicode-ident",
-]
-
-[[package]]
-name = "wasm-streams"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9d1ec4f6517c9e11ae630e200b2b65d193279042e28edd4a2cda233e46670bbb"
-dependencies = [
- "futures-util",
- "js-sys",
- "wasm-bindgen",
- "wasm-bindgen-futures",
- "web-sys",
 ]
 
 [[package]]
