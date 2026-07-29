@@ -8,9 +8,9 @@ publish = false
 
 [dependencies]
 anyhow = "1.0.104"
-china_unicom_oxidebot = { git = "https://github.com/canxin121/china_unicom_oxidebot", rev = "509c10ca83a95af8655ac27f6da6a3d79ccf734c", version = "1.0.0" }
-oxidebot = { git = "https://github.com/canxin121/oxidebot", rev = "5a867139a12b716c54d2464c9fe7d2ca8af7e8ed", version = "1.0.0" }
-oxidebot-adapter-telegram = { git = "https://github.com/canxin121/oxidebot", rev = "5a867139a12b716c54d2464c9fe7d2ca8af7e8ed", version = "1.0.0" }
+china_unicom_oxidebot = { git = "https://github.com/canxin121/china_unicom_oxidebot", rev = "c461c81c23c05c3c139ece042a74433983cebb50", version = "1.0.0" }
+oxidebot = { git = "https://github.com/canxin121/oxidebot", rev = "4e1ba8bcdd24b8d3965809450847dbee2689f5ff", version = "1.0.0" }
+oxidebot-adapter-telegram = { git = "https://github.com/canxin121/oxidebot", rev = "4e1ba8bcdd24b8d3965809450847dbee2689f5ff", version = "1.0.0" }
 tokio = { version = "1.53.1", features = ["macros", "rt-multi-thread"] }
 tracing-subscriber = "0.3.23"
 
