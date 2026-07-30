@@ -528,7 +528,7 @@ dependencies = [
 [[package]]
 name = "china-unicom-rs"
 version = "1.0.0"
-source = "git+https://github.com/canxin121/china-unicom-rs#bfb4deea129d53d91c2748f828c6d4373da77c0c"
+source = "git+https://github.com/canxin121/china-unicom-rs#2f26268dab115384780bc2f4831898e110aaf91f"
 dependencies = [
  "base64 0.23.0",
  "chrono",
@@ -559,7 +559,7 @@ dependencies = [
 [[package]]
 name = "china_unicom_oxidebot"
 version = "1.0.0"
-source = "git+https://github.com/canxin121/china_unicom_oxidebot?rev=bffe97b9f14330c34044cc935216a7da235aedd6#bffe97b9f14330c34044cc935216a7da235aedd6"
+source = "git+https://github.com/canxin121/china_unicom_oxidebot?rev=58987e3#58987e31bc5e0ab57777577aaa95844bf6278dc5"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -2184,7 +2184,7 @@ dependencies = [
 
 [[package]]
 name = "oxidebot_app"
-version = "1.0.1"
+version = "1.0.2"
 dependencies = [
  "anyhow",
  "china_unicom_oxidebot",
