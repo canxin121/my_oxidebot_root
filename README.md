@@ -92,14 +92,14 @@ cd manager-app
 ## 发布
 
 推送到 `main` 时，GitHub Actions 会运行测试、构建四种 ABI、模块 ZIP 和 Debug 管理 App，
-但不会创建 Release。推送与 `template.properties` 中版本一致的 tag，例如 `v1.0.2`，才会
+但不会创建 Release。推送与 `template.properties` 中版本一致的 tag，例如 `v1.0.3`，才会
 构建签名 APK并发布正式 Release。
 
 正式发布资产包括：
 
 ```text
-canxin_oxidebot-v1.0.2.zip
-canxin_oxidebot-manager-v1.0.2.apk
+canxin_oxidebot-v1.0.3.zip
+canxin_oxidebot-manager-v1.0.3.apk
 update.json
 ```
 

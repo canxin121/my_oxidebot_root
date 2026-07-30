@@ -1,7 +1,7 @@
 id=canxin_oxidebot
 name=Canxin OxideBot
-version=v1.0.2
-versionCode=6
+version=v1.0.3
+versionCode=7
 author=canxin121
 description=Personal Telegram OxideBot with China Unicom usage monitoring
 updateJson=https://github.com/canxin121/my_oxidebot_root/releases/latest/download/update.json
